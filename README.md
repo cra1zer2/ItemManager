@@ -26,26 +26,6 @@ ItemManager/
 │   │   ├── ItemManagerImpl.java   # Concrete implementation of the logic
 │   │   ├── Product.java           # Data model for a single product
 │   │   └── Main.java              # Entry point / Demonstration script
-│   └── test/java/                 # (Reserved for JUnit tests)
-└── README.md
-```
-
-## 🚀 Implementation Status
-
-### ✅ Completed
-- **Core Logic**: Full implementation of `ItemManager` interface and `Product` model.
-- **Data Handling**: `ArrayList` integration for dynamic list management.
-- **Demonstration**: `Main.java` setup to populate and display sample data (Oranges, Matcha, Apple).
-- **Output**: `showProductInfo()` and `showList()` methods are functional.
-
-### 🚧 In Progress
-- **Unit Testing**: Integration of **JUnit 5** to verify logic (Constructors, Add/Remove flows).
-
-## 🎓 Educational Roadmap & Future Goals
-Since this is an educational project, future development focuses on learning new concepts:
-
-1.  **Unit Testing (Priority)**:
-    -   Implement comprehensive test coverage using JUnit 5.
     -   Test edge cases (e.g., removing non-existent items).
 2.  **Interactive CLI**:
     -   Expand `Main.java` to use `Scanner` for a fully interactive command-line interface (User Input Loop).
