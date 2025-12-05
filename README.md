@@ -20,12 +20,36 @@ The project is organized into a clean package structure:
 
 ```
 ItemManager/
+├── pom.xml                # Maven configuration
 ├── src/
 │   ├── main/java/ItemManager/
-│   │   ├── ItemManager.java       # Interface defining core operations
-│   │   ├── ItemManagerImpl.java   # Concrete implementation of the logic
-│   │   ├── Product.java           # Data model for a single product
-│   │   └── Main.java              # Entry point / Demonstration script
+│       ├── ItemManager.java       # Interface defining core operations
+│       ├── ItemManagerImpl.java   # Concrete implementation of the logic
+│       ├── Product.java           # Data model for a single product
+│       └── Main.java              # Entry point / Demonstration script
+```
+## 🚀 How to Run
+
+### Prerequisites
+- Java Development Kit (JDK) 8 or higher
+- Maven
+
+### Build and Run
+1. Navigate to the project root:
+   ```bash
+   cd ItemManager
+   ```
+2. Compile the project:
+   ```bash
+   mvn clean compile
+   ```
+3. Run the application:
+   ```bash
+   mvn exec:java -Dexec.mainClass="ItemManager.Main"
+   ```
+
+## 🔮 Future Improvements
+1.  **Input Validation**:
     -   Test edge cases (e.g., removing non-existent items).
 2.  **Interactive CLI**:
     -   Expand `Main.java` to use `Scanner` for a fully interactive command-line interface (User Input Loop).
