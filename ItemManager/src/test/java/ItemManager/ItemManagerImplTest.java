@@ -15,8 +15,6 @@ class ItemManagerImplTest {
         itemManager = new ItemManagerImpl();
     }
 
-    // --- Product Tests ---
-
     @Test
     void testProductConstructor() {
         Product p = new Product("TestItem", 5, "TestCat", false);
@@ -32,8 +30,6 @@ class ItemManagerImplTest {
         p.setPurchased(true);
         assertTrue(p.isPurchased());
     }
-
-    // --- ItemManagerImpl Tests ---
 
     @Test
     void testAddItem() {
@@ -53,7 +49,7 @@ class ItemManagerImplTest {
     @Test
     void testRemoveNonExistentItem() {
         itemManager.addItem("Apple", 10, "Fruit");
-        itemManager.removeItem("Banana"); // Should not throw exception
+        itemManager.removeItem("Banana");
         assertEquals(1, itemManager.getAllItems().size());
     }
 
@@ -71,7 +67,6 @@ class ItemManagerImplTest {
     @Test
     void testMarkItemAsPurchased() {
         itemManager.addItem("Milk", 1, "Dairy");
-        // markAsPurchased uses 1-based index
         itemManager.markAsPurchased(1);
 
         Product p = itemManager.findItem("Milk");
@@ -81,8 +76,8 @@ class ItemManagerImplTest {
     @Test
     void testMarkItemAsPurchasedInvalidIndex() {
         itemManager.addItem("Milk", 1, "Dairy");
-        itemManager.markAsPurchased(0); // Invalid
-        itemManager.markAsPurchased(2); // Invalid
+        itemManager.markAsPurchased(0);
+        itemManager.markAsPurchased(2);
 
         Product p = itemManager.findItem("Milk");
         assertFalse(p.isPurchased());
